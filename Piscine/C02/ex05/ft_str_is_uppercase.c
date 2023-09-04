@@ -6,7 +6,7 @@
 /*   By: jsilva-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 17:03:36 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/08/31 17:17:42 by jsilva-c         ###   ########.fr       */
+/*   Updated: 2023/09/04 10:06:17 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -17,7 +17,7 @@ int	ft_str_is_uppercase(char *str)
 	int	i;
 
 	i = 0;
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
 		if (str[i] < 'A' || str[i] > 'Z')
 		{
@@ -30,7 +30,7 @@ int	ft_str_is_uppercase(char *str)
 /*
 int	main()
 {
-	char	test[100] = "HEY";
+	char	test[100] = "HeY";
 
 	printf("%d", ft_str_is_uppercase(test));
 }

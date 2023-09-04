@@ -6,7 +6,7 @@
 /*   By: jsilva-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/02 12:08:14 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/09/02 13:11:42 by jsilva-c         ###   ########.fr       */
+/*   Updated: 2023/09/04 10:09:52 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -33,22 +33,5 @@ int	main(void)
 	char	str[] = "joao";
 
 	printf("%s", ft_strupcase(str));
-}
-*/
-/*
-int	main(void)
-{
-	char	str[] = "Joao";
-	char	dest[5];
-	int	i;
-	
-	i = 0;
-
-	dest = ft_strupcase(str);
-	while (str[i] != '\0')
-	{
-		write(1, &dest[i], 1);
-		i++;
-	}
 }
 */

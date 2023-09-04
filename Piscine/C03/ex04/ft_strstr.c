@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsilva-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/02 16:10:44 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/09/02 16:18:33 by jsilva-c         ###   ########.fr       */
+/*   Created: 2023/09/04 20:38:44 by jsilva-c          #+#    #+#             */
+/*   Updated: 2023/09/04 21:03:30 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 #include <stdio.h>
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+char	*ft_strstr(char *str, char *to_find)
 {
+	int	i;
+	int	j;
 
+	j = 0;
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if(str[i] == to_find[i] || to_find[x] == '\0')
+			x++;
+	} 	
 }
 
-int	main()
+int	main(void)
 {
-	char	*dest;
-	char	*src;
-	int	size;
+	char	string[] = "Help me god!";
+	char	find[] = "god";
 
-	printf
 }

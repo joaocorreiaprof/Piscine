@@ -1,40 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsilva-c <jsilva-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/30 20:09:54 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/09/04 09:46:06 by jsilva-c         ###   ########.fr       */
+/*   Created: 2023/09/04 18:59:56 by jsilva-c          #+#    #+#             */
+/*   Updated: 2023/09/04 20:37:45 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-/*#include <stdio.h>*/
-char	*ft_strcpy(char *dest, char *src)
+//#include<stdio.h>
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
+	unsigned int	i;
+	unsigned int	j;
 
+	j = 0;
 	i = 0;
-	while (src[i] != '\0')
+	while (dest[i] != '\0')
 	{
-		dest[i] = src[i];
 		i++;
+	}
+	while (src[j] != '\0' && nb > 0)
+	{
+		dest[i] = src[j];
+		j++;
+		i++;
+		nb--;
 	}
 	dest[i] = '\0';
 	return (dest);
 }
 /*
-int	main()
+int	main(void)
 {
-	char	source[50] = "hello FRIEND "; 
-	char	destination[50];
+	char	destination[] = "PROVE ME IM ";
+	char	source[] = "WRONG";
+	int	t = 3;
 
-	ft_strcpy(destination, source);
-    
-	printf("%s\n", destination);
-    
-	return (0);
+	printf("%s", ft_strncat(destination, source, t));
 }
 */

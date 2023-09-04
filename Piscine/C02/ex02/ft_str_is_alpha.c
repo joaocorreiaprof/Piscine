@@ -6,7 +6,7 @@
 /*   By: jsilva-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 13:10:09 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/08/31 14:57:27 by jsilva-c         ###   ########.fr       */
+/*   Updated: 2023/09/04 09:56:56 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -33,4 +33,5 @@ int	main()
 	char	test[] = "HelloWorld";
 
 	printf("%d", ft_str_is_alpha(test));
-}*/
+}
+*/

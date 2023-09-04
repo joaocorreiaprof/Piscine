@@ -1,38 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsilva-c <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jsilva-c <jsilva-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/02 14:16:52 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/09/04 21:04:49 by jsilva-c         ###   ########.fr       */
+/*   Created: 2023/09/04 17:33:25 by jsilva-c          #+#    #+#             */
+/*   Updated: 2023/09/04 18:59:18 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-//CODIGO NAO PASSOU NA MAQUINA
-#include <unistd.h>
+
 //#include <stdio.h>
 
-char	*ft_strlowcase(char *str)
+char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
+	int	j;
 
 	i = 0;
-	while (str[i] != '\0')
+	j = 0;
+	while (dest[i] != '\0')
 	{
-		if (str[i] >= 65 && str[i] <= 97)
-		{
-			str[i] = str[i] + 32;
-		}
 		i++;
 	}
-	return (str);
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
 /*
 int	main(void)
 {
-	char	str[100] = "SUCHAWONDERFULLWORLD";
-	
-	printf("%s", ft_strlowcase(str));
+	char    destination[100] = "Kill me"; 
+	char    source[100] = " NOW! PLEEEAAAAAAAASE";
+
+	printf("%s", ft_strcat(destination, source));
 }
 */

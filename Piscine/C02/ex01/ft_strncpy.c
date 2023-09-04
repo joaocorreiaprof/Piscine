@@ -6,11 +6,11 @@
 /*   By: jsilva-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 20:58:23 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/09/01 11:35:05 by jsilva-c         ###   ########.fr       */
+/*   Updated: 2023/09/04 09:51:39 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
-#include <stdio.h>
+//#include <stdio.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
@@ -29,7 +29,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
-
+/*
 int	main()
 {
 	char	source[50] = "Hello World";
@@ -39,4 +39,4 @@ int	main()
 	printf("%s\n", destination);
 	return (0);
 }
-
+*/

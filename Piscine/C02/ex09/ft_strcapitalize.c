@@ -6,15 +6,16 @@
 /*   By: jsilva-c <jsilva-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/02 14:49:47 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/09/02 19:24:37 by jsilva-c         ###   ########.fr       */
+/*   Updated: 2023/09/04 21:05:10 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+//CODIGO NAO PASSOU NA MAQUINA 
 #include <stdio.h>
 
 char	*ft_strcapitalize(char *str)
 {
 	int	i;
+
 	i = 0;
 	while (str[i] != '\0')
 	{
@@ -27,21 +28,16 @@ char	*ft_strcapitalize(char *str)
 			i++;
 		}
 		else if ((str[i] >= 'A' && str[i] <= 'Z') && i != 0)
-		{
 			str[i] = str[i] + 32;
-		}
 		else if ((str[i] >= 'a' && str[i] <= 'z') && i == 0)
-		{
 			str[i] = str[i] - 32;
-		}
 		else
-		{
 			str[i] = str[i];
-		}
 		i++;
 	}
 	return (str);
 }
+/*
 #include <stdio.h>
 int	main(void)
 {
@@ -49,3 +45,4 @@ int	main(void)
 	printf("%s\n", ft_strcapitalize(str));
 	return (0);
 }
+*/
