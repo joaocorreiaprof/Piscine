@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsilva-c <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jsilva-c <jsilva-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 20:58:23 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/09/04 09:51:39 by jsilva-c         ###   ########.fr       */
+/*   Updated: 2023/09/05 09:39:44 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
-//#include <stdio.h>
+
+#include <stdio.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
@@ -32,10 +32,10 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 /*
 int	main()
 {
-	char	source[50] = "Hello World";
+	char	source[50] = "hugohugohugo";
 	char	destination[51];
 
-	ft_strncpy(destination, source, 3);
+	ft_strncpy(destination, source, 8);
 	printf("%s\n", destination);
 	return (0);
 }

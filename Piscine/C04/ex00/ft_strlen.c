@@ -1,43 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsilva-c <jsilva-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jsilva-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 17:33:25 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/09/05 19:17:17 by jsilva-c         ###   ########.fr       */
+/*   Created: 2023/09/05 10:19:30 by jsilva-c          #+#    #+#             */
+/*   Updated: 2023/09/05 10:34:31 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//#include <unistd.h>
 //#include <stdio.h>
 
-char	*ft_strcat(char *dest, char *src)
+int	ft_strlen(char *str)
 {
 	int	i;
-	int	j;
+	int	count;
 
 	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
+	count = 0;
+	while (str[i] != '\0')
 	{
 		i++;
+		count++; 
 	}
-	while (src[j] != '\0')
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	return (count);
 }
 /*
 int	main(void)
 {
-	char    destination[100] = "Kill me"; 
-	char    source[100] = " NOW! PLEEEAAAAAAAASE";
+	char	string[100] = "LUKE! IM YOUR FATHER!";
 
-	printf("%s", ft_strcat(destination, source));
+	printf("The number of characters is: %d\n", ft_strlen(string));
 }
 */

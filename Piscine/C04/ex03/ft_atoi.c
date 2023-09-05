@@ -1,53 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsilva-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 20:38:44 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/09/04 21:03:30 by jsilva-c         ###   ########.fr       */
+/*   Created: 2023/09/05 13:22:00 by jsilva-c          #+#    #+#             */
+/*   Updated: 2023/09/05 18:45:29 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-char	*ft_strstr(char *str, char *to_find)
+
+int	ft_atoi(char *str)
 {
 	int	i;
-	int	x;
+	int	s;
+	int	r;
 
 	i = 0;
-	x = 0;
-	while (str[i] != '\0')
+	r = 0;
+	s = 1;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 	{
-		if (str[i] == to_find[i] || to_find[x] == '\0')
+		i++;
+	}
+	while (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
 		{
-			x++;
+			s = s* -1;
 		}
-		else
-		{
-			x = 0;
-			i++;
-		}
+		i++;
 	}
-	if (x == 0)
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		return ("NULL");
+		r = r * 10;
+		r = r + str[i] - 48;
+		i++;
 	}
-	else
-	{
-		return (&str[i - x]);
-	}
+	return ( r * s );
 }
 /*
 int	main(void)
 {
-	char	string[] = "Help me god!";
-	char	to_find[] = "god";
+	char 	str[100] = " ---+--+1234ab567";
 
-	ft_strstr(string, to_find);
-	printf("%s\n", string);
-	printf("%s", to_find); 
+	printf("%d", ft_atoi(str));
+
 }
 */

@@ -6,7 +6,7 @@
 /*   By: jsilva-c <jsilva-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 12:37:50 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/09/04 16:26:27 by jsilva-c         ###   ########.fr       */
+/*   Updated: 2023/09/05 19:08:09 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ int     main(void)
     int     t = 3;
     //int     result = ft_strncmp(str1, str2, t);
 
-    printf("%d", ft_strncmp(str1, str2, t));
+    printf("%d",ft_strncmp(str1, str2, t));
 }
 */
