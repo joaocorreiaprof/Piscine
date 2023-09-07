@@ -6,11 +6,11 @@
 /*   By: jsilva-c <jsilva-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 10:53:47 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/09/05 19:15:51 by jsilva-c         ###   ########.fr       */
+/*   Updated: 2023/09/06 09:46:22 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 //#include <unistd.h>
 
 int	ft_strcmp(char *s1, char *s2)

@@ -1,49 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsilva-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 20:38:44 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/09/04 21:03:30 by jsilva-c         ###   ########.fr       */
+/*   Created: 2023/09/07 10:23:44 by jsilva-c          #+#    #+#             */
+/*   Updated: 2023/09/07 11:18:30 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-char	*ft_strstr(char *str, char *to_find)
+#include <unistd.h>
+
+void	print_string(char *str)
 {
 	int	i;
-	int	x;
 
 	i = 0;
-	x = 0;
-	if (to_find[i] == 0)
-	{
-		return (str);
-	}
 	while (str[i] != '\0')
 	{
-		while (str[i + x] == to_find[x])
-		{
-			x++;
-			if (to_find[x] == '\0')
-			{
-				return (&str[i]);
-			}
-		}
-		x = 0;
+		write(1, &str[i], 1);
 		i++;
 	}
+}
+
+int	main(int argc, char **argv)
+{
+	if (argc == 0)
+		return (0); 
+	print_string(argv[0]);
 	return (0);
 }
-/*
-int	main(void)
-{
-	char	string[] = "Help me god!";
-	char	to_find[] = "me";
-
-	printf("%s", ft_strstr(string, to_find));
-}
-*/
