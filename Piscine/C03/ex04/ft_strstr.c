@@ -41,8 +41,8 @@ char	*ft_strstr(char *str, char *to_find)
 /*
 int	main(void)
 {
-	char	string[] = "Help me god!";
-	char	to_find[] = "me";
+	char	string[] = "teteste";
+	char	to_find[] = "teste";
 
 	printf("%s", ft_strstr(string, to_find));
 }

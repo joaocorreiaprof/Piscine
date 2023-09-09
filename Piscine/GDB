@@ -1,0 +1,36 @@
+Hey fellow swimmerzzzz!
+
+For those of you that have been using Python Tutor to go through your code (and for those of you that didn't), consider start using GDB aka GNU Debugger to check your code for buggerinos.
+
+It goes through your code step by step as well BUT, it runs on your terminals and CAN be used on the exam.
+You can click here for a quick reference on the most used commands for it.
+
+In short, how can you use it?
+
+Compile your .c program using the following command: cc -g <*.c file> (ex. cc -g coolfile.c)
+It's important to use the "-g", so, don't skip it.
+
+Use the regular Werror, Wall and Wextra as well, of course.
+
+Start GDB by using: gdb --tui <program> (ex.  gdb --tui ./a.out)
+--tui will help you by displaying your whole .c file and highlighting which parts are being run/
+read
+
+If you want to use arguments (argc/argv stuff), you need ALSO to use --args (ex. gdb --tui --
+
+args ./a.out arg1 arg2)
+
+To make GDB start running your code 1 line at a time, write start
+
+If you don't see your code, write "c" and click enter.
+
+To move to the next line in the code write: next or n
+
+To step into a function (when you call another function on main, for example), write: step or s
+
+If you want to display a variable and its value, write: display <variable name> (ex. display n)
+
+To exit, simply write: exit
+
+I think this will be enough to help you get started.
+
