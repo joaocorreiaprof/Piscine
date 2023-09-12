@@ -5,35 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsilva-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 12:16:00 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/09/07 12:50:46 by jsilva-c         ###   ########.fr       */
+/*   Created: 2023/09/11 09:58:17 by jsilva-c          #+#    #+#             */
+/*   Updated: 2023/09/11 10:18:45 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	fr_putreverse_string(char *string)
+void	ft_putstr(char *str)
 {
-	int	j;
-
-	j = 0;
-	while (string[j] != '\0')
-	{
-		write(1, &string[j], 1);
-		j++ ;
-	}
+	while (*str)
+		write(1, str++, 1);
 	write(1, "\n", 1);
 }
 
 int	main(int argc, char **argv)
 {
-	int	i;
-
-	i = argc -1;
-	while (argc > i)
+	while (--argc)
 	{
-		fr_putreverse_string(argv[i]);
-		i--;
+		ft_putstr(argv[argc]);
 	}
-	return (0);
 }

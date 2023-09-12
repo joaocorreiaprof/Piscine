@@ -1,46 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsilva-c <jsilva-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 20:17:35 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/09/12 10:14:59 by jsilva-c         ###   ########.fr       */
+/*   Created: 2023/09/12 10:51:40 by jsilva-c          #+#    #+#             */
+/*   Updated: 2023/09/12 13:50:36 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 //#include <stdlib.h>
 
-int	ft_recursive_factorial(int nb)
+int	ft_fibonacci(int index)
 {
-	if (nb < 0)
+	if (index < 0)
+	{
+		return (-1);
+	}
+	else if (index == 0)
 	{
 		return (0);
 	}
-	else if (nb >= 1)
+	else if (index == 1 || index == 2)
 	{
-		return (nb *= ft_recursive_factorial(nb -1));
+		return (1);
 	}
 	else
 	{
-		return (1);
+		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 	}
 }
 /*
 int	main(int argc, char **argv)
 {
-	int	fact;
+	int	n;
+	int	res;
 
-	if (argc !=2)
+	if (argc != 2)
 	{
-		printf("Input not accepted");
+		printf("Input nao aceite!");
+		return (0);
 	}
-
-	fact = ft_recursive_factorial(atoi(argv[1]));
-
-	printf("the factorial of the number is: %d", fact);
+	n = atoi(argv[1]);
+	res = ft_fibonacci(n);
+	printf("The number %d in Fibonacci sequence is: %d\n", n, res);
 	return (0);
-}
-*/
+}*/

@@ -1,46 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsilva-c <jsilva-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 20:17:35 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/09/12 10:14:59 by jsilva-c         ###   ########.fr       */
+/*   Created: 2023/09/12 11:33:07 by jsilva-c          #+#    #+#             */
+/*   Updated: 2023/09/12 11:45:50 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 //#include <stdlib.h>
 
-int	ft_recursive_factorial(int nb)
+int	ft_sqrt(int nb)
 {
-	if (nb < 0)
+	int	exp;
+
+	exp = 1;
+	if (nb > 0)
 	{
-		return (0);
+		while (exp * exp <= nb)
+		{
+			if (exp * exp == nb)
+				return (exp);
+			if (exp > 46340)
+				return (0);
+			exp++;
+		}
 	}
-	else if (nb >= 1)
-	{
-		return (nb *= ft_recursive_factorial(nb -1));
-	}
-	else
-	{
-		return (1);
-	}
+	return (0);
 }
 /*
 int	main(int argc, char **argv)
 {
-	int	fact;
+	int res;
 
-	if (argc !=2)
+	if (argc != 2)
 	{
-		printf("Input not accepted");
+		printf("Input not accepted!");
+		return (0);
 	}
-
-	fact = ft_recursive_factorial(atoi(argv[1]));
-
-	printf("the factorial of the number is: %d", fact);
+	res = ft_sqrt(atoi(argv[1]));
+	printf("The square root of the number %d is: %d\n", atoi(argv[1]), res);
 	return (0);
 }
 */

@@ -1,46 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsilva-c <jsilva-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 20:17:35 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/09/12 10:14:59 by jsilva-c         ###   ########.fr       */
+/*   Created: 2023/09/12 12:18:20 by jsilva-c          #+#    #+#             */
+/*   Updated: 2023/09/12 13:57:39 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 //#include <stdlib.h>
 
-int	ft_recursive_factorial(int nb)
+int	ft_is_prime(int nb)
 {
-	if (nb < 0)
+	int	i;
+
+	if (nb < 2) 
 	{
 		return (0);
 	}
-	else if (nb >= 1)
-	{
-		return (nb *= ft_recursive_factorial(nb -1));
-	}
-	else
+	if (nb == 2) 
 	{
 		return (1);
 	}
+	i = 2;
+	while (i < nb) 
+	{
+		if (nb % i == 0) 
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (1);
 }
 /*
-int	main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	int	fact;
-
-	if (argc !=2)
-	{
-		printf("Input not accepted");
-	}
-
-	fact = ft_recursive_factorial(atoi(argv[1]));
-
-	printf("the factorial of the number is: %d", fact);
-	return (0);
+    int prime;
+    (void)argc;
+    prime = ft_is_prime(atoi(argv[1]));
+    printf("%d", prime);
+    return (0);
 }
 */

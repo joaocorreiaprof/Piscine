@@ -5,29 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsilva-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 10:23:44 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/09/07 11:18:30 by jsilva-c         ###   ########.fr       */
+/*   Created: 2023/09/11 09:24:30 by jsilva-c          #+#    #+#             */
+/*   Updated: 2023/09/11 09:43:05 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	print_string(char *str)
+void	ft_putchar(char c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
+	write(1, &c, 1);
 }
 
 int	main(int argc, char **argv)
 {
-	if (argc == 0)
-		return (0); 
-	print_string(argv[0]);
-	return (0);
+	int	i;
+
+	(void)argc;
+	i = 0;
+	while (argv[0][i])
+	{
+		ft_putchar(argv[0][i]);
+		i++;
+	}
 }

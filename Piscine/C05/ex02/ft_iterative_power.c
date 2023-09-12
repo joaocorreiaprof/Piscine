@@ -1,46 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsilva-c <jsilva-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 20:17:35 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/09/12 10:14:59 by jsilva-c         ###   ########.fr       */
+/*   Created: 2023/09/11 11:19:56 by jsilva-c          #+#    #+#             */
+/*   Updated: 2023/09/12 13:35:43 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 //#include <stdlib.h>
 
-int	ft_recursive_factorial(int nb)
+int	ft_iterative_power(int nb, int power)
 {
-	if (nb < 0)
+	int	r;
+
+	r = 1;
+	if (power < 0)
 	{
 		return (0);
 	}
-	else if (nb >= 1)
-	{
-		return (nb *= ft_recursive_factorial(nb -1));
-	}
-	else
+	if (power == 0 && power == 0)
 	{
 		return (1);
 	}
+	while (power > 0)
+	{
+		r *= nb;
+		power--;
+	}
+	return (r);
 }
 /*
 int	main(int argc, char **argv)
 {
-	int	fact;
+	int	power;
 
-	if (argc !=2)
+	if (argc != 3)
 	{
-		printf("Input not accepted");
+		printf("Too few or too many arguments");
+		return (0);
 	}
 
-	fact = ft_recursive_factorial(atoi(argv[1]));
-
-	printf("the factorial of the number is: %d", fact);
+	power = ft_iterative_power(atoi(argv[1]), atoi(argv[2]));
+	printf("the power of the number is: %d", power);
 	return (0);
 }
 */

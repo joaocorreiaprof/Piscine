@@ -1,46 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsilva-c <jsilva-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 20:17:35 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/09/12 10:14:59 by jsilva-c         ###   ########.fr       */
+/*   Created: 2023/09/12 10:36:22 by jsilva-c          #+#    #+#             */
+/*   Updated: 2023/09/12 15:34:15 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
 //#include <stdlib.h>
+//#include <stdio.h>
 
-int	ft_recursive_factorial(int nb)
+int	ft_recursive_power(int nb, int power)
 {
-	if (nb < 0)
+	if (power < 0)
 	{
 		return (0);
 	}
-	else if (nb >= 1)
+	else if (power == 0)
 	{
-		return (nb *= ft_recursive_factorial(nb -1));
+		return (1);
 	}
 	else
 	{
-		return (1);
+		return (nb * ft_recursive_power(nb, power - 1));
 	}
 }
 /*
 int	main(int argc, char **argv)
 {
-	int	fact;
-
-	if (argc !=2)
+	if (argc != 3)
 	{
-		printf("Input not accepted");
+	printf("Usage: %s base power\n", argv[0]);
+	return (1);
 	}
 
-	fact = ft_recursive_factorial(atoi(argv[1]));
+	int base = atoi(argv[1]);
+	int power = atoi(argv[2]);
 
-	printf("the factorial of the number is: %d", fact);
+	int result = ft_recursive_power(base, power);
+	printf("The power of the number is: %d\n", result);
+
 	return (0);
 }
 */
