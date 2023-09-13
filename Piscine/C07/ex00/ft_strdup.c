@@ -6,62 +6,50 @@
 /*   By: jsilva-c <jsilva-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:13:14 by jsilva-c          #+#    #+#             */
-/*   Updated: 2023/09/12 18:50:02 by jsilva-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 15:53:56 by jsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+//#include <stdio.h>
 
-char *ft_strdup(const char *src)
+char	*ft_strdup(char *src)
 {
-    if (src == NULL)
-        return NULL;
+	int		len;
+	int		i;
+	char	*dest;
 
-    size_t src_len = 0;
-    while (src[src_len] != '\0')
-        src_len++;
-
-    char *dup_str = (char *)malloc((src_len + 1) * sizeof(char));
-
-    if (dup_str == NULL)
-        return NULL;
-
-    size_t i = 0;
-    while (i <= src_len)
-    {
-        dup_str[i] = src[i];
-        i++;
-    }
-
-    return dup_str;
+	len = 0;
+	while (src[len] != '\0')
+	{
+		len++;
+	}
+	dest = (char *)malloc(sizeof(char) * (len + 1));
+	if (dest == NULL)
+	{
+		return (NULL);
+	}
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
-
-#include <stdio.h>
-
-char *ft_strdup(const char *src);
-
-int main(int argc, char *argv[])
+/*
+int	main(int argc, char **argv)
 {
-    if (argc != 2)
-    {
-        printf("Usage: %s <source_string>\n", argv[0]);
-        return 1;
-    }
+	int	i;
 
-    char *source = argv[1];
-    char *duplicate = ft_strdup(source);
-
-    if (duplicate == NULL)
-    {
-        printf("Memory allocation failed.\n");
-        return 1;
-    }
-
-    printf("Source String: %s\n", source);
-    printf("Duplicate String: %s\n", duplicate);
-
-    // Remember to free the memory allocated for the duplicate string.
-    free(duplicate);
-
-    return 0;
+	i = 1;
+	if (argc != 2)
+	{
+		printf("Too few or too many arguments");
+		return (0);
+	}
+	printf("%s", ft_strdup(argv[i]));
+	return (0);
 }
+*/
